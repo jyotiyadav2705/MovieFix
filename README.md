@@ -21,11 +21,11 @@ A React application that lists movies and implements smooth scrolling behavior t
 ### Steps to Run the Project
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/your-repo-name.git
+    git clone https://github.com/jyotiyadav2705/MovieFix.git
     ```
 2. Navigate to the project directory:
     ```sh
-    cd your-repo-name
+    cd MovieFix
     ```
 3. Install the dependencies:
     ```sh
@@ -53,5 +53,5 @@ This project uses Zustand for state management. Zustand is a small, fast, and sc
 This project uses [The Movie Database (TMDb) API](https://developer.themoviedb.org/reference/discover-movie) to fetch movie data. Ensure you have a valid API key from TMDb.
 
 ## Repository
-[GitHub Repository](https://github.com/yourusername/your-repo-name)
+[GitHub Repository](https://github.com/jyotiyadav2705/MovieFix.git)
 
