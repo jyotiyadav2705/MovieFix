@@ -1,24 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import Category from "./components/category";
+import MovieList from './components/movie-list';
+import { useCreateStore, StoreContext } from './store/globalStore';
 
 function App() {
+  const createStore = useCreateStore([]);//create zustand store
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <StoreContext.Provider value={createStore}>
+        <Category />
+        <MovieList />
+      </StoreContext.Provider>
+    </>
   );
 }
 

@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Movie Listing App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application that lists movies and implements smooth scrolling behavior to load more movies as the user scrolls. The app loads movies of the previous year when the user scrolls up and movies of the next year when the user scrolls down until the current year. The app uses Zustand for state management and fetches movie data from [The Movie Database (TMDb) API](https://developer.themoviedb.org/reference/discover-movie).
 
-## Available Scripts
+## Features
+- Load movies of the previous year when scrolling up.
+- Load movies of the next year when scrolling down.
+- Select movie genres to filter the movie list.
 
-In the project directory, you can run:
+## Technologies Used
+- React 18.3.1
+- Zustand 4.5.2
+- Node.js 19.9.0
 
-### `npm start`
+## Prerequisites
+- Node.js 19.9.0 or later
+- npm 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Getting Started
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Steps to Run the Project
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/your-repo-name.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd your-repo-name
+    ```
+3. Install the dependencies:
+    ```sh
+    npm install
+    ```
+4. Start the development server:
+    ```sh
+    npm start
+    ```
+5. Open your browser and go to `http://localhost:3000`.
 
-### `npm test`
+## State Management
+This project uses Zustand for state management. Zustand is a small, fast, and scalable state-management solution for React.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Scrolling Behavior
+- **Scroll Down**: When the user scrolls down, movies from the next year are loaded until the current year is reached.
+- **Scroll Up**: When the user scrolls up, movies from the previous year are loaded.
+- The API calls are debounced to avoid excessive requests.
 
-### `npm run build`
+## Genre Selection
+- The user can select one or more genres to filter the movie list.
+- When a genre is selected, the movie list is reset and movies are fetched based on the selected genres.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## API
+This project uses [The Movie Database (TMDb) API](https://developer.themoviedb.org/reference/discover-movie) to fetch movie data. Ensure you have a valid API key from TMDb.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Repository
+[GitHub Repository](https://github.com/yourusername/your-repo-name)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
